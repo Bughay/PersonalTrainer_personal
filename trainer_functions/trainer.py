@@ -1,14 +1,14 @@
 from modules.chat_template import DeepseekChat
 from modules.deep_seek_extraction import DeepseekExtractor
-from trainer_functions.config import example_schema, extraction_prompt, extraction_schema, separate_food_prompt,separate_training_prompt,extraction_schema_training,example_schema_training
+from trainer_functions.llm_prompts import example_schema, extraction_prompt, extraction_schema, separate_food_prompt,separate_training_prompt,extraction_schema_training,example_schema_training
 from openai import OpenAI
 import sqlite3
 from datetime import datetime
-from dotenv import load_dotenv
-import os
-load_dotenv()  
 
-api_key = os.getenv("DEEPSEEK_API_KEY")
+from config import settings
+
+
+api_key = settings.api_key
 
 
 

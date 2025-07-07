@@ -1,7 +1,8 @@
 from sqlalchemy import create_engine, Column, String, Integer, Float, DateTime
 from sqlalchemy.orm import declarative_base
 from datetime import datetime
-db_url = 'sqlite:///trainer.db'
+from config import settings
+db_url = settings.db_url
 engine = create_engine(db_url)
 
 Base = declarative_base()

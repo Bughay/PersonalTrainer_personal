@@ -2,9 +2,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 import json
-load_dotenv()  
 
-api_key = os.getenv("DEEPSEEK_API_KEY")
 class DeepseekExtractor:
     def __init__(self,user_message,extraction_prompt,extraction_schema,example_schema,api_key):
         self.client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
